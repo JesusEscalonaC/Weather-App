@@ -10,7 +10,7 @@ const Climate = ({visible, setVisible}) => {
     
     useEffect(()=>{
         setCounter(counter+1);
-        if(counter===2){
+        if(counter===1){
             setVisible(true);
         }
     },[weather])
@@ -43,9 +43,9 @@ const Climate = ({visible, setVisible}) => {
             </h3>
             </div>
             <div className='right'>     
-            <h3><i class="fa-solid fa-cloud-sun"></i> {weather.weather?.[0]?.description}</h3>
-            <h4><i class="fa-solid fa-droplet"></i> Humidity: {weather.main?.humidity}%</h4>
-            <h4><i class="fa-solid fa-wind"></i> Speed: {weather.wind?.speed}m/s</h4>
+            <h3><i className="fa-solid fa-cloud-sun"></i> {weather.weather?.[0]?.description}</h3>
+            <h4><i className="fa-solid fa-droplet"></i> Humidity: {weather.main?.humidity}%</h4>
+            <h4><i className="fa-solid fa-wind"></i> Speed: {weather.wind?.speed}m/s</h4>
             </div>
             </div>
             <button className='button' onClick={() => setTemp(!temp)}>°C/°F</button>
